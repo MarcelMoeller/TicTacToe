@@ -43,7 +43,7 @@ class TicTacToe
                 session_destroy();
                 //@ToDo Add game end
             }
-            $this->switchPlayer();
+            $this->togglePlayer();
             $this->board->showBoard($this->currentPlayer);
 
         } else {
@@ -52,9 +52,9 @@ class TicTacToe
     }
 
     /**
-     * @UMLCHANGES There is no method to switch players and it would be better to outsource it into its on method instead of writing it into the playTurn method
+     * @UMLCHANGES There is no method to toggle players and it would be better to outsource it into its on method instead of writing it into the playTurn method
      */
-    private function switchPlayer(){
+    private function togglePlayer(){
         if($this->currentPlayer === $this->playerOne) {
             $this->currentPlayer = $this->playerTwo;
         } elseif ($this->currentPlayer === $this->playerTwo) {
