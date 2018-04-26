@@ -19,9 +19,13 @@ input.field {
     font-weight: normal;
     cursor: pointer;
 }
-input.field:hover {
+input.field.colorX:hover {
     border: 0;
     color: #c81657; /* red on hover */
+}
+input.field.colorO:hover {
+    border: 0;
+    color: #2929f7;
 }
 .colorX { color: #e77; } /* X is light red */
 .colorO { color: #77e; } /* O is light blue */

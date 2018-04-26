@@ -50,7 +50,7 @@ class Board
             for ($iColumn = 0; $iColumn < count($this->board[$iRow]); $iColumn++) {
                 //Checks if the cell is empty
                 if (empty($this->board[$iRow][$iColumn])) {
-                    $boardHtml .= '<td><input type="submit"  class="reset field" name="cell-' . $iRow . '-' . $iColumn . '" value="' . $currentPlayer->getSymbol() . '" /></td>';
+                    $boardHtml .= '<td><input type="submit"  class="reset field color'. $currentPlayer->getSymbol() .'" name="cell-' . $iRow . '-' . $iColumn . '" value="' . $currentPlayer->getSymbol() . '" /></td>';
                 }
                 //Checks if the cell has a "X"
                 if ($this->board[$iRow][$iColumn] === "X") {
