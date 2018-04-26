@@ -38,13 +38,13 @@ class TicTacToe
     public function playTurn($row, $column, $symbol)
     {
         if($this->board->setPosition($row,$column,$symbol)) {
-            $this->board->showBoard($this->currentPlayer);
             if($this->checkGameEnd()) {
                 echo "There is a winner";
                 session_destroy();
                 //@ToDo Add game end
             }
             $this->switchPlayer();
+            $this->board->showBoard($this->currentPlayer);
 
         } else {
             $this->board->showBoard($this->currentPlayer);
