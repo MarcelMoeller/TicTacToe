@@ -5,13 +5,15 @@
     require_once("Board.php");
     if(isset($_SESSION["Tictactoe"])){
         $game = unserialize($_SESSION["Tictactoe"]);
-        if(isset($_GET)){
+        if(!empty($_GET)){
             $key = key($_GET);
             $matches = [];
             preg_match("/cell-(\d)-(\d)/",$key,$matches);
             $row = $matches[1];
             $column = $matches[2];
             $game->playTurn($row,$column,$_GET[$key]);
+        } else {
+            $game->showBoard();
         }
     } else {
         $board = new Board();
@@ -19,7 +21,7 @@
         $playerTwo = new Player("Marcel2","O");
         /** @noinspection PhpUndefinedClassInspection */
         $game = new TicTacToe($board, $playerOne, $playerTwo, $playerOne);
-        $board->showBoard($playerOne);
+        $game->showBoard();
     }
 
     $_SESSION["Tictactoe"] = serialize($game);

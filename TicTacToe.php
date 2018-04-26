@@ -115,4 +115,11 @@ class TicTacToe
         }
     }
 
+    /**
+     * Returns the board
+     */
+    public function showBoard() {
+        $this->board->showBoard($this->currentPlayer);
+    }
+
 }
