@@ -14,6 +14,9 @@ class TicTacToe
     /** @var \Player $currentPlayer */
     private $currentPlayer;
 
+    /** @var bool $isDraw */
+    private $isDraw;
+
     /**
      * TicTacToe constructor.
      * @param Board $board
@@ -39,9 +42,12 @@ class TicTacToe
     {
         if($this->board->setPosition($row,$column,$symbol)) {
             if($this->checkGameEnd()) {
-                echo "There is a winner";
+                if ($this->isDraw === true) {
+                    echo "This game resulted in a draw.";
+                } else {
+                    echo "The winner is " . $this->currentPlayer->getName();
+                }
                 session_destroy();
-                //@ToDo Add game end
             }
             $this->togglePlayer();
             $this->board->showBoard($this->currentPlayer);
@@ -72,6 +78,7 @@ class TicTacToe
     private function checkGameEnd()
     {
         $board = $this->board->getBoard();
+        $gotEmptyField = false;
         $checkDiaLeft = [];
         $checkDiaRight = [];
         // Iterate through each board row
@@ -79,6 +86,10 @@ class TicTacToe
             /** Check for winning row */
             $checkRow = $board[$iRow];
 
+            //Check the row for a empty field
+            if(in_array("",$checkRow)) {
+                $gotEmptyField = true;
+            }
 
             /** Check for winning column*/
             $checkColumn = [];
@@ -95,6 +106,12 @@ class TicTacToe
             }
         }
         if( $this->checkUnique($checkDiaLeft) || $this->checkUnique($checkDiaRight)) {
+            return true;
+        }
+
+        //Set isDraw to true and return if there is no empty field
+        if($gotEmptyField === false) {
+            $this->isDraw = true;
             return true;
         }
         return false;
