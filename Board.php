@@ -26,7 +26,6 @@ class Board
      */
     public function showBoard($currentPlayer)
     {
-        var_dump($currentPlayer);
         $boardTemplate = "";
         $boardTemplate .= file_get_contents("BoardTemplateTop.php");
         $boardTemplate .= $this->renderBoard($currentPlayer);
@@ -64,7 +63,6 @@ class Board
             }
             $boardHtml .= '<tr/>';
         }
-        var_dump($currentPlayer);
 
         return $boardHtml;
     }
@@ -81,8 +79,7 @@ class Board
             $this->board[$row][$column] = $symbol;
             return true;
         } else {
-            /** @ToDO handle set field */
-            var_dump("already set");
+            var_dump("Field is already set");
             return false;
         }
     }
