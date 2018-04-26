@@ -1,0 +1,28 @@
+table.tic td {
+    border: 1px solid #333; /* grey cell borders */
+    width: 8rem;
+    height: 8rem;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 4rem;
+    font-family: Arial;
+}
+table { margin-bottom: 2rem; }
+input.field {
+    border: 0;
+    background-color: white;
+    color: white; /* make the value invisible (white) */
+    height: 8rem;
+    width: 8rem !important;
+    font-family: Arial;
+    font-size: 4rem;
+    font-weight: normal;
+    cursor: pointer;
+}
+input.field:hover {
+    border: 0;
+    color: #c81657; /* red on hover */
+}
+.colorX { color: #e77; } /* X is light red */
+.colorO { color: #77e; } /* O is light blue */
+table.tic { border-collapse: collapse; }
