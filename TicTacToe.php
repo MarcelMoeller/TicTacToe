@@ -43,9 +43,9 @@ class TicTacToe
         if($this->board->setPosition($row,$column,$symbol)) {
             if($this->checkGameEnd()) {
                 if ($this->isDraw === true) {
-                    echo "This game resulted in a draw.";
+                    echo '<script>alert("This game resulted in a draw.")</script>';
                 } else {
-                    echo "The winner is " . $this->currentPlayer->getName();
+                    echo '<script>alert("The winner is ' . $this->currentPlayer->getName() . '")</script>';
                 }
                 session_destroy();
             }
