@@ -38,10 +38,15 @@ class TicTacToe
      * @param int $row
      * @param int $column
      * @param string $symbol
+     * @throws
      * Play a turn
      */
     public function playTurn($row, $column, $symbol)
     {
+        //Check if the symbol from the $_GET variable matches the current player symbol if not throw an error because the game might be manipulated.
+        if($this->currentPlayer->getSymbol() !== $symbol) {
+            throw new Exception("Current players symbol doesnt match with the one from the $_GET variable. The game might be manipulated.");
+        }
         //Set a symbol with setPosition() and check if the method returns true
         //setPosition() method returns true if the symbol got successfully set at the specific position
         if($this->board->setPosition($row,$column,$symbol)) {
