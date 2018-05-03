@@ -18,7 +18,7 @@
             for($i = 0; $i < count($keys); $i++) {
                 preg_match("/cell-(\d)-(\d)/",$keys[$i],$matches);
                 if(!empty($matches)) {
-                    //Get the match key and the groups 1 and 2 which contains the col and the row
+                    //Get the matched key and the groups 1 and 2 which contains the col and the row
                     $key = $keys[$i];
                     $row = $matches[1];
                     $col = $matches[2];
