@@ -7,6 +7,7 @@
     //Check if the $_SESSION variable contains the tictactoe object
     if(isset($_SESSION["Tictactoe"])){
         //Unserialize tictactoe variable
+        /** @var \TicTacToe $game */
         $game = unserialize($_SESSION["Tictactoe"]);
         //Check if the $_GET variable is not empty
         if(isset($_GET) && !empty($_GET)){
