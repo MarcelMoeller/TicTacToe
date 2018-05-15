@@ -23,7 +23,7 @@
                     $row = $matches[1];
                     $col = $matches[2];
                     //Play a turn with the values of the $_GET variable
-                    $game->playTurn($row,$col,$_GET[$key]);
+                    $game->playTurn($row,$col);
                     //Break out of the for loop because it is only allowed to play a single turn per player.
                     //Without the break the game could be manipulated.
                     break;
