@@ -37,7 +37,6 @@ class TicTacToe
     /**
      * @param int $row
      * @param int $column
-     * @param string $symbol
      * @throws
      * Play a turn
      */
