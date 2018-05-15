@@ -27,9 +27,13 @@ class Board
     public function showBoard($currentPlayer)
     {
         $boardTemplate = "";
+        //Gets the top part of the html document and add it to the template.
         $boardTemplate .= file_get_contents("BoardTemplateTop.php");
+        //Call the renderBoard method which renders the board for the currentPlayer.
         $boardTemplate .= $this->renderBoard($currentPlayer);
+        //Gets the bottom part of the html document and add it to the template.
         $boardTemplate .= file_get_contents("BoardTemplateBottom.php");
+        //Output the html document.
         echo $boardTemplate;
     }
 
@@ -75,11 +79,13 @@ class Board
      * @return bool
      */
     public function setPosition($row,$column,$symbol){
-        if (empty($this->board[$row][$column])) {
+        //Sets the symbol at the given position if it is empty and return true
+        if (isset($this->board[$row][$column]) && empty($this->board[$row][$column])) {
             $this->board[$row][$column] = $symbol;
             return true;
         } else {
-            var_dump("Field is already set");
+            //Outputs a notification and return false
+            var_dump("Field is already set or does not exist");
             return false;
         }
     }
