@@ -70,7 +70,6 @@ class TicTacToe
 
     /**
      * Toggles between the two players of the TicTacToe object
-     * @UMLCHANGES There is no method to toggle players and it would be better to outsource it into its on method instead of writing it into the playTurn method
      */
     private function togglePlayer(){
         //Check if the currentPlayer is either playerOne or playerTwo and switch to the other one
@@ -85,7 +84,6 @@ class TicTacToe
 
     /**
      * Check if the game ends and return a boolean
-     * @UMLCHANGES Rename getWinner() function and check the winner through currentPlayer
      *
      * @return bool
      */
@@ -138,8 +136,6 @@ class TicTacToe
     }
 
     /**
-     * @UMLCHANGES Added as an Helper function to prevent repeating
-     *
      * Check for a single unique value which is not empty
      * @param $array
      * @return bool

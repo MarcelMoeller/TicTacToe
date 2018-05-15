@@ -19,8 +19,6 @@ class Board
     }
 
     /**
-     * @UMLCHANGES There is no way to render the boards html at all
-     *
      * Outputs the board
      * @param \Player $currentPlayer
      */
@@ -39,8 +37,6 @@ class Board
 
 
     /**
-     * @UMLCHANGES There is no way to render the boards html at all
-     *
      * Renders the Board with the information from the $board array
      * @return string $boardHtml
      * @param \Player $currentPlayer
@@ -85,7 +81,7 @@ class Board
             return true;
         } else {
             //Outputs a notification and return false
-            var_dump("Field is already set or does not exist");
+            echo("Field is already set or does not exist");
             return false;
         }
     }
