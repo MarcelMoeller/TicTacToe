@@ -1,11 +1,22 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: Marcel
+ */
 
+/** Class Player*/
 class Player
 {
-    /** @var string $name */
+    /**
+     * Name of the player
+     * @var string $name
+     */
     private $name;
 
-    /** @var string $symbol */
+    /**
+     * TicTacToe symbol of the player
+     * @var string $symbol
+     */
     private $symbol;
 
     /**

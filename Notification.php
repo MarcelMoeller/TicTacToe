@@ -6,9 +6,13 @@
  * Time: 09:45
  */
 
+/**
+ * Class Notification
+ */
 class Notification
 {
     /**
+     * Contains multiple strings for outputting
      * @var string $output
      */
     private static $output = "";

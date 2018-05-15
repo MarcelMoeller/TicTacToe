@@ -1,21 +1,42 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: Marcel
+ */
 
-//TicTacToe class
+/**
+ * Class TicTacToe
+ */
 class TicTacToe
 {
-    /** @var \Board $board */
+    /**
+     * Board object
+     * @var \Board $board
+     */
     private $board;
 
-    /** @var \Player $playerOne */
+    /**
+     * Player 1
+     * @var \Player $playerOne
+     */
     private $playerOne;
 
-    /** @var \Player $playerTwo */
+    /**
+     * Player 2
+     * @var \Player $playerTwo
+     */
     private $playerTwo;
 
-    /** @var \Player $currentPlayer */
+    /**
+     * The current player
+     * @var \Player $currentPlayer
+     */
     private $currentPlayer;
 
-    /** @var bool $isDraw */
+    /**
+     * It is used to check if the game resulted in a draw
+     * @var bool $isDraw
+     */
     private $isDraw;
 
     /**
@@ -35,10 +56,10 @@ class TicTacToe
     }
 
     /**
+     * Play a turn and change the player afterwards
      * @param int $row
      * @param int $column
      * @throws
-     * Play a turn
      */
     public function playTurn($row, $column)
     {

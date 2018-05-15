@@ -1,5 +1,8 @@
 <?php
     session_start();
+/**
+ * Main file of tictactoe
+ */
     //Include classes
     require_once("TicTacToe.php");
     require_once("Player.php");
