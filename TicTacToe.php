@@ -49,9 +49,9 @@ class TicTacToe
             if($this->checkGameEnd()) {
                 //Check if the game ended in a draw and output the specific notification
                 if ($this->isDraw === true) {
-                    echo '<script>alert("This game resulted in a draw.")</script>';
+                    \Notification::addOutput('<script>alert("This game resulted in a draw.")</script>');
                 } else {
-                    echo '<script>alert("The winner is ' . $this->currentPlayer->getName() . '")</script>';
+                    \Notification::addOutput('<script>alert("The winner is ' . $this->currentPlayer->getName() . '")</script>');
                 }
                 //Destroy the session due to game end
                 //A new game will start afterwards
@@ -77,7 +77,7 @@ class TicTacToe
         } elseif ($this->currentPlayer === $this->playerTwo) {
             $this->currentPlayer = $this->playerOne;
         } else {
-            echo "Spieler konnte nicht gewechselt werden";
+            \Notification::addOutput("Spieler konnte nicht gewechselt werden");
         }
     }
 

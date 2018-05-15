@@ -4,6 +4,7 @@
     require_once("TicTacToe.php");
     require_once("Player.php");
     require_once("Board.php");
+    require_once("Notification.php");
     //Check if the $_SESSION variable contains the tictactoe object
     if(isset($_SESSION["Tictactoe"])){
         //Unserialize tictactoe variable
@@ -38,6 +39,7 @@
         /** @noinspection PhpUndefinedClassInspection */
         $game = new TicTacToe($board, $playerOne, $playerTwo, $playerOne);
     }
+    echo \Notification::getOutput();
     echo $game->showBoard();
 
 

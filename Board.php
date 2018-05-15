@@ -83,7 +83,7 @@ class Board
             return true;
         } else {
             //Outputs a notification and return false
-            echo("Field is already set or does not exist");
+            \Notification::addOutput("Field is already set or does not exist");
             return false;
         }
     }
