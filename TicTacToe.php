@@ -155,7 +155,7 @@ class TicTacToe
      * This way there is no need to somehow get the current player if the showBoard method of the board gets called outside the TicTacToe class
      */
     public function showBoard() {
-        $this->board->showBoard($this->currentPlayer);
+        return $this->board->showBoard($this->currentPlayer);
     }
 
 }

@@ -21,6 +21,7 @@ class Board
     /**
      * Outputs the board
      * @param \Player $currentPlayer
+     * @return string $boardTemplate
      */
     public function showBoard($currentPlayer)
     {
@@ -32,7 +33,7 @@ class Board
         //Gets the bottom part of the html document and add it to the template.
         $boardTemplate .= file_get_contents("BoardTemplateBottom.php");
         //Output the html document.
-        echo $boardTemplate;
+        return $boardTemplate;
     }
 
 
@@ -44,6 +45,7 @@ class Board
     public function renderBoard($currentPlayer)
     {
         $boardHtml = "";
+        $boardHtml .= '<table class="tic">';
         //Iterates through each row and generate each row
         for ($iRow = 0; $iRow < count($this->board); $iRow++) {
             $boardHtml .= '<tr>';
@@ -63,7 +65,7 @@ class Board
             }
             $boardHtml .= '<tr/>';
         }
-
+        $boardHtml .= '</table>';
         return $boardHtml;
     }
 

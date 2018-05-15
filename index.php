@@ -29,9 +29,6 @@
                     break;
                 }
             }
-        } else {
-            //If $_GET is empty just show the board
-            $game->showBoard();
         }
     } else {
         //Create a new TicTacToe game including the board and the two players and show the empty board afterwards
@@ -40,8 +37,9 @@
         $playerTwo = new Player("Marcel2","O");
         /** @noinspection PhpUndefinedClassInspection */
         $game = new TicTacToe($board, $playerOne, $playerTwo, $playerOne);
-        $game->showBoard();
     }
+    echo $game->showBoard();
+
 
     //Safe the current TicTacToe game into a session
     $_SESSION["Tictactoe"] = serialize($game);

@@ -12,4 +12,4 @@
         <h2>Your free browsergame!</h2>
         <p>Type your game instructions here...</p>
         <form method="get" action="index.php">
-            <table class="tic">
+
