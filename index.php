@@ -43,10 +43,10 @@
         $game = new TicTacToe($board, $playerOne, $playerTwo, $playerOne);
     }
     echo \Notification::getOutput();
-    include_once("src/BoardTemplateTop.html");
+    include_once("templates/BoardTemplateTop.html");
     echo $game->showCurrentScore();
     echo $game->showBoard();
-    include_once("src/BoardTemplateBottom.html");
+    include_once("templates/BoardTemplateBottom.html");
 
 
     //Safe the current TicTacToe game into a session

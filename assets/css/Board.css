@@ -1,5 +1,39 @@
-body {
-    text-align: center;
+
+input.field.colorO:hover {
+    border: 0;
+    color: #2929f7;
+}
+
+
+
+
+.bg-colorESFLGruen {
+    background-color: #00948e;
+}
+.bg-colorESFLRot {
+    background-color: #c81657;
+}
+.bg-colorESFLBlau {
+    background-color: #0d80b9;
+}
+.bg-colorESFLGelb {
+    background-color: #f6d700;
+}
+.bg-colorESFLGrau {
+    background-color: #3d3d3b;
+}
+.bg-colorWhite {
+    background-color: white;
+}
+.textWhite {
+    color: white;
+}
+.navbar-logo {
+    height: 34px;
+}
+.footer-logo {
+    height: 8rem;
+    border: .5rem solid white;
 }
 table.tic td {
     border: 1px solid #333; /* grey cell borders */
@@ -10,9 +44,7 @@ table.tic td {
     font-size: 4rem;
     font-family: Arial;
 }
-table {
-    margin: 0 auto 2rem auto;
-}
+table { margin-bottom: 2rem; }
 input.field {
     border: 0;
     background-color: white;
@@ -24,13 +56,12 @@ input.field {
     font-weight: normal;
     cursor: pointer;
 }
-input.field.colorX:hover {
+input.field:hover {
     border: 0;
     color: #c81657; /* red on hover */
 }
-input.field.colorO:hover {
-    border: 0;
-    color: #2929f7;
+table.tic input{
+    width: 2rem;
 }
 .colorX { color: #e77; } /* X is light red */
 .colorO { color: #77e; } /* O is light blue */
