@@ -36,12 +36,8 @@ class Board
     public function showBoard($currentPlayer)
     {
         $boardTemplate = "";
-        //Gets the top part of the html document and add it to the template.
-        $boardTemplate .= file_get_contents("BoardTemplateTop.html");
         //Call the renderBoard method which renders the board for the currentPlayer.
         $boardTemplate .= $this->renderBoard($currentPlayer);
-        //Gets the bottom part of the html document and add it to the template.
-        $boardTemplate .= file_get_contents("BoardTemplateBottom.html");
         //Output the html document.
         return $boardTemplate;
     }

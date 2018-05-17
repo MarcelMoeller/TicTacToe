@@ -1,10 +1,7 @@
 <?php
     session_start();
-    //Include classes
-    require_once("TicTacToe.php");
-    require_once("Player.php");
-    require_once("Board.php");
-    require_once("Notification.php");
+    define('BASEPATH', realpath(dirname(__FILE__)));
+    require_once (BASEPATH . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php');
     //Check if the $_SESSION variable contains the tictactoe object
     if(isset($_SESSION["Tictactoe"])){
         //Unserialize tictactoe variable
@@ -40,7 +37,9 @@
         $game = new TicTacToe($board, $playerOne, $playerTwo, $playerOne);
     }
     echo \Notification::getOutput();
+    include_once("src/BoardTemplateTop.html");
     echo $game->showBoard();
+    include_once("src/BoardTemplateBottom.html");
 
 
     //Safe the current TicTacToe game into a session
