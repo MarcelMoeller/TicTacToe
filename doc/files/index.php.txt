@@ -1,13 +1,13 @@
 <?php
     session_start();
-/**
- * Main file of tictactoe
- */
-    //Include classes
-    require_once("TicTacToe.php");
-    require_once("Player.php");
-    require_once("Board.php");
-    require_once("Notification.php");
+    define('BASEPATH', realpath(dirname(__FILE__)));
+    require_once (BASEPATH . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php');
+    //Restarts the game if the restart button gets pressed.
+    if(isset($_GET["restart"]) && $_GET["restart"] == 1) {
+        session_destroy();
+        session_start();
+    }
+
     //Check if the $_SESSION variable contains the tictactoe object
     if(isset($_SESSION["Tictactoe"])){
         //Unserialize tictactoe variable
@@ -43,7 +43,10 @@
         $game = new TicTacToe($board, $playerOne, $playerTwo, $playerOne);
     }
     echo \Notification::getOutput();
+    include_once("templates/BoardTemplateTop.html");
+    echo $game->showCurrentScore();
     echo $game->showBoard();
+    include_once("templates/BoardTemplateBottom.html");
 
 
     //Safe the current TicTacToe game into a session

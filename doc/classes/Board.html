@@ -106,12 +106,12 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="../reports/errors.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">1</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">2</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="../reports/markers.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
                                 </a>
                             </li>
                             <li>
@@ -136,10 +136,10 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1772325141"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-779652986"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-1772325141" class="accordion-body collapse in">
+            <div id="namespace-779652986" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                     
@@ -186,9 +186,9 @@
                         <section class="row-fluid public">
                             <section class="span4">
                                                                     <a href="../classes/Board.html#method_getBoard" class="">getBoard()</a><br />
-                                                                    <a href="../classes/Board.html#method_showBoard" class="">showBoard()</a><br />
                                                                     <a href="../classes/Board.html#method_renderBoard" class="">renderBoard()</a><br />
                                                                     <a href="../classes/Board.html#method_setPosition" class="">setPosition()</a><br />
+                                                                    <a href="../classes/Board.html#method_resetBoard" class="">resetBoard()</a><br />
                                                             </section>
                             <section class="span4">
                                                                     <em>No public properties found</em>
@@ -226,7 +226,7 @@
                     
                     <dl>
                         <dt>File</dt>
-                            <dd><a href="../files/Board.html"><div class="path-wrapper">Board.php</div></a></dd>
+                            <dd><a href="../files/src.Board.html"><div class="path-wrapper">src\Board.php</div></a></dd>
                                                 <dt>Package</dt>
                             <dd><div class="namespace-wrapper">Default</div></dd>
                                                 <dt>Class hierarchy</dt>
@@ -301,43 +301,6 @@
                                     <h4>Returns</h4>
                     array
                                             &mdash; <p>$board</p>
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_showBoard" name="method_showBoard" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">showBoard()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">showBoard(\Player  <span class="argument">$currentPlayer</span>) : string</pre>
-                <p><em>Outputs the board</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td><a href="../classes/Player.html">\Player</a></td>
-                                <td>$currentPlayer </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                                    <h4>Returns</h4>
-                    string
-                                            &mdash; <p>$boardTemplate</p>
                                     				
                             </article>
         </div>
@@ -435,6 +398,32 @@
         </aside>
     </div>
 
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_resetBoard" name="method_resetBoard" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">resetBoard()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">resetBoard() </pre>
+                <p><em>Clears the board</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
                                                                     </div>
     </section>
 
@@ -444,7 +433,7 @@
             <h3 id="source-view-label">Board.php</h3>
         </div>
         <div class="modal-body">
-            <pre data-src="../files/Board.php.txt" class="language-php line-numbers"></pre>
+            <pre data-src="../files/src\Board.php.txt" class="language-php line-numbers"></pre>
         </div>
     </div>
 
@@ -484,7 +473,7 @@
                 <section class="span10 offset1">
                     <hr />
                     Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on May 15th, 2018 at 10:36.
+                    on May 17th, 2018 at 10:57.
                 </section>
             </section>
         </section>

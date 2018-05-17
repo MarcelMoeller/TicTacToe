@@ -176,6 +176,10 @@ class TicTacToe
         return $this->board->renderBoard($this->currentPlayer);
     }
 
+    /**
+     * Returns the current score of both players
+     * @return string
+     */
     public function showCurrentScore() {
         $output = "";
         $output .= '<div>';
