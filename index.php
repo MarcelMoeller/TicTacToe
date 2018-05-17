@@ -2,6 +2,12 @@
     session_start();
     define('BASEPATH', realpath(dirname(__FILE__)));
     require_once (BASEPATH . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php');
+    //Restarts the game if the restart button gets pressed.
+    if(isset($_GET["restart"]) && $_GET["restart"] == 1) {
+        session_destroy();
+        session_start();
+    }
+
     //Check if the $_SESSION variable contains the tictactoe object
     if(isset($_SESSION["Tictactoe"])){
         //Unserialize tictactoe variable
