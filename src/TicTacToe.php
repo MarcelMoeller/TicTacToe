@@ -77,6 +77,8 @@ class TicTacToe
                 }
                 //Clears the board to start a new game
                 $this->board->resetBoard();
+                //Reset isDraw to prevent all following games to end in a draw.
+                $this->isDraw = false;
 
             }
             //Switch the player and show the current board after the current player played his turn
