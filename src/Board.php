@@ -28,20 +28,6 @@ class Board
         return $this->board;
     }
 
-    /**
-     * Outputs the board
-     * @param \Player $currentPlayer
-     * @return string $boardTemplate
-     */
-    public function showBoard($currentPlayer)
-    {
-        $boardTemplate = "";
-        //Call the renderBoard method which renders the board for the currentPlayer.
-        $boardTemplate .= $this->renderBoard($currentPlayer);
-        //Output the html document.
-        return $boardTemplate;
-    }
-
 
     /**
      * Renders the Board with the information from the $board array

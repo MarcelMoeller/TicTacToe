@@ -80,11 +80,6 @@ class TicTacToe
             }
             //Switch the player and show the current board after the current player played his turn
             $this->togglePlayer();
-            $this->board->showBoard($this->currentPlayer);
-
-        } else {
-            //If the symbol couldn't get set just show the board
-            $this->board->showBoard($this->currentPlayer);
         }
     }
 
@@ -175,7 +170,7 @@ class TicTacToe
      * This way there is no need to somehow get the current player if the showBoard method of the board gets called outside the TicTacToe class
      */
     public function showBoard() {
-        return $this->board->showBoard($this->currentPlayer);
+        return $this->board->renderBoard($this->currentPlayer);
     }
 
 }
