@@ -70,13 +70,14 @@ class TicTacToe
             if($this->checkGameEnd()) {
                 //Check if the game ended in a draw and output the specific notification
                 if ($this->isDraw === true) {
-                    \Notification::addOutput('<script>alert("This game resulted in a draw.")</script>');
+                    \Notification::addOutput('This game resulted in a draw.');
                 } else {
-                    \Notification::addOutput('<script>alert("The winner is ' . $this->currentPlayer->getName() . '")</script>');
+                    $this->currentPlayer->increaseScore();
+                    \Notification::addOutput('The winner is ' . $this->currentPlayer->getName() . '');
                 }
-                //Destroy the session due to game end
-                //A new game will start afterwards
-                session_destroy();
+                //Clears the board to start a new game
+                $this->board->resetBoard();
+
             }
             //Switch the player and show the current board after the current player played his turn
             $this->togglePlayer();
@@ -171,6 +172,19 @@ class TicTacToe
      */
     public function showBoard() {
         return $this->board->renderBoard($this->currentPlayer);
+    }
+
+    public function showCurrentScore() {
+        $output = "";
+        $output .= '<div>';
+        $output .= '<div>';
+        $output .= '<p>' . $this->playerOne->getName() .'(' . $this->playerOne->getSymbol() .'): ' . $this->playerOne->getScore() .'</p>';
+        $output .= '</div>';
+        $output .= '<div>';
+        $output .= '<p>' . $this->playerTwo->getName() .'(' . $this->playerTwo->getSymbol() .'): ' . $this->playerTwo->getScore() .'</p>';
+        $output .= '</div>';
+        $output .= '</div>';
+        return $output;
     }
 
 }

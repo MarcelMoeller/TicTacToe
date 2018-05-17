@@ -79,4 +79,15 @@ class Board
             return false;
         }
     }
+
+    /**
+     * Clears the board
+     */
+    public function resetBoard() {
+        $this->board = [
+            ["", "", ""],
+            ["", "", ""],
+            ["", "", ""],
+        ];
+    }
 }

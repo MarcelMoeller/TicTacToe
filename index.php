@@ -44,6 +44,7 @@
     }
     echo \Notification::getOutput();
     include_once("src/BoardTemplateTop.html");
+    echo $game->showCurrentScore();
     echo $game->showBoard();
     include_once("src/BoardTemplateBottom.html");
 
