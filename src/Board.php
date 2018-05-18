@@ -55,7 +55,7 @@ class Board
                     $boardHtml .= '<td><span class="colorO">O</span></td>';
                 }
             }
-            $boardHtml .= '<tr/>';
+            $boardHtml .= '</tr>';
         }
         $boardHtml .= '</table>';
         return $boardHtml;
