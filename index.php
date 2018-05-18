@@ -42,8 +42,9 @@
         /** @noinspection PhpUndefinedClassInspection */
         $game = new TicTacToe($board, $playerOne, $playerTwo, $playerOne);
     }
-    echo \Notification::getOutput();
+
     include_once("templates/BoardTemplateTop.html");
+    echo \Notification::getOutput();
     echo $game->showCurrentScore();
     echo $game->showBoard();
     include_once("templates/BoardTemplateBottom.html");
