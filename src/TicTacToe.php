@@ -131,9 +131,9 @@ class TicTacToe
             //The "-1" is important cause the count function starts counting at 1 and $iRow starts at 0. That means that there would be one column to much
             $currDiaColumn = count($board) - $iRow  - 1;
             //Diagonal bottom left to top right
-            $checkDiaLeft[] = $board[$iRow][$currDiaColumn];
+            $checkDiaRight[] = $board[$iRow][$currDiaColumn];
             //Diagonal top left to bottom right
-            $checkDiaRight[] = $board[$iRow][$iRow];
+            $checkDiaLeft[] = $board[$iRow][$iRow];
             //Check if the prepared column and row only got one unique symbol inside and no empty fields
             if( $this->checkUnique($checkColumn) || $this->checkUnique($checkRow)) {
                 return true;
