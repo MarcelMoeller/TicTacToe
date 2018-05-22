@@ -22,8 +22,7 @@
             for($i = 0; $i < count($keys); $i++) {
                 preg_match("/cell-(\d)-(\d)/",$keys[$i],$matches);
                 if(!empty($matches)) {
-                    //Get the matched key and the groups 1 and 2 which contains the col and the row
-                    $key = $keys[$i];
+                    //Get the groups 1 and 2 which contains the col and the row
                     $row = $matches[1];
                     $col = $matches[2];
                     //Play a turn with the values of the $_GET variable
