@@ -9,7 +9,7 @@
     }
 
     //Check if the $_SESSION variable contains the tictactoe object
-    if(isset($_SESSION["Tictactoe"])){
+    if(isset($_SESSION["Tictactoe"]) && !empty($_SESSION["Tictactoe"])){
         //Unserialize tictactoe variable
         /** @var \TicTacToe $game */
         $game = unserialize($_SESSION["Tictactoe"]);
