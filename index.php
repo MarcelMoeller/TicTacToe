@@ -20,7 +20,7 @@
             $matches = [];
             //Iterate through all keys and check if pregmatch gets a match
             for($i = 0; $i < count($keys); $i++) {
-                preg_match("/cell-(\d)-(\d)/",$keys[$i],$matches);
+                preg_match("/^cell-(\d)-(\d)$/",$keys[$i],$matches);
                 if(!empty($matches)) {
                     //Get the groups 1 and 2 which contains the col and the row
                     $row = $matches[1];
