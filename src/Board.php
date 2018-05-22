@@ -65,7 +65,7 @@ class Board
      * Sets a symbol at a specific cell
      * @param int $row
      * @param int $column
-     * @param int $symbol
+     * @param string $symbol The symbol needs to be the char O or X.
      * @return bool
      */
     public function setPosition($row,$column,$symbol){
