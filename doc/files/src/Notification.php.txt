@@ -33,3 +33,4 @@ class Notification
         self::$output .= $string . "<br/>";
     }
 }
+?>
